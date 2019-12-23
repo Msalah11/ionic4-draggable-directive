@@ -11,6 +11,18 @@ in your ``main.ts`` add
 import 'hammerjs';
 ......
 ````
+in your ``app.module.ts``
+````
+.....
+import { KuflabDragDirective } from './directives/kuflab-drag.directive';
+.....
+
+@NgModule({
+    declarations: [AppComponent, KuflabDragDirective],
+    .....
+    exports: [KuflabDragDirective]
+})
+````
 ##### Use It
 ```
 <ion-fab vertical="bottom" horizontal="end" slot="fixed" kuflabDrag>
